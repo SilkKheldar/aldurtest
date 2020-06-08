@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>ALDUR's memorize helper</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<!--  wersja z wykorzystaniem ActiveX
+<script>
+function getFolder(){
+  return showModalDialog("folderDialog.html","","width:400px;height:400px;resizeable:yes;");
+}
+</script>
+-->
+<!--  drag & drop z wykorzystaniem PLUPLOAD
+<script>
+var dropzone = document.getElementById('dropzone');
+dropzone.ondrop = function(e) {
+  var length = e.dataTransfer.items.length;
+  for (var i = 0; i < length; i++) {
+    var entry = e.dataTransfer.items[i].webkitGetAsEntry();
+    if (entry.isFile) {
+      echo "to jest entry typu plik<br />"; // do whatever you want
+    } else if (entry.isDirectory) {
+      echo "to jest entry typu katalog<br />"; // do whatever you want
+    }
+  }
+};
+</script>
+-->
+	
+</head>
+
+<body>
+
+
+<!-- menu sterowania aplikacją -->
+<div id="menu">
+Tutaj menu wyboru sesji i innych opcji...
+
+<form name="katalog" action="test_start.php" method="post">
+
+<!--  wersja z wykorzystaniem ActiveX
+	<input type="button" value="Wybierz katalog z dysku..." onclick="this.form.yourFieldName.value=getFolder()">
+<br />
+-->
+	
+	<input id='tenKatalog' type='file' webkitdirectory />
+<br />
+<input id="ctrl" type="file" webkitdirectory directory multiple />
+<br />
+	<input type="submit" />
+
+</form>
+
+test wyświetlenia obrazka z dysku lokalnego (poza XAMPP)<br />
+<img src="C:/test.jpg">
+<br />
+test wyświetlenia obrazka z dysku lokalnego (w XAMPP)<br />
+<img src="../img/test.jpg" width=200>
+<br />
+
+</div>
+
+<!--- treści -->
+<div id="content">
+<br \>
+Tutaj obrazki i inna treść...
+
+<!--  drag & drop z wykorzystaniem PLUPLOAD
+<div id="dropzone">tutaj przeciągnij katalog...</div>
+-->
+
+</div>  
+
+<!-- panel oceny pytania -->
+<div id="ocena">
+  <ul>
+	<li>dobrze</li>
+	<li>źle</li>
+  </ul>
+</div>
+
+</body>
