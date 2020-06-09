@@ -1,8 +1,130 @@
+$main-color: #193b05;
+$font-color: #ffffff;
+$font-color-special: #ff0000;
+$default-font: arial, sans-serif;
+$special-font: "pt sans", "roboto", arial, sans-serif;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  background-color: $main-color;
+  color: $font-color;
+  font-family: $default-font;
+}
 .wrapper {
+  // kontener
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  padding: 5px 5px;
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0 auto;
+  box-shadow: 0 0 4px 0 #000000;
+  font-size: 1.5rem;
+}
+.footer {
+  font-size: 1rem;
+}
+
+.logo {
+  //padding: 5px 5px;
+  background-color: rgb(100, 38, 39);
+  flex-grow: 0;
+  flex-basis: 80px;
+  &__img {
+    width: 100%;
+    display: block;
+  }
+}
+.menu {
+  background-color: rgb(133, 55, 55);
+  padding: 10px 10px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  max-height: 80px;
+}
+.status {
+  background-color: rgb(100, 38, 39);
+  padding: 10px 10px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.setup {
+  flex-basis: 100%; //wymusza rozpoczęcie nowego wiersza we Flexbox
+  min-height: 40vh;
+  background-color: yellowgreen;
+  display: flex;
+  &__manage {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    background-color: #154e35;
+    align-items: center;
+    justify-content: center;
+    &__iconlink {
+      margin: 0 5px;
+      font-size: 3rem;
+      color: #fff;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  &__filelist {
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+}
+.quiz {
+  flex-basis: 100%;
+  min-height: 40vh;
+  background-color: rgb(100, 38, 39);
+  display: flex;
+  &__content {
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    flex-grow: 1;
+  }
+  &__control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__iconlink {
+      margin: 0 5px;
+      font-size: 3rem;
+      color: #fff;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+.footer {
+  flex-basis: 100%;
+  font-size: 0.7rem;
+  padding: 5px 0;
+  color: black;
+  justify-content: center;
+  align-items: center;
 }

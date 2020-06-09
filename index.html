@@ -4,24 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aldur - Simple Image Test</title>
+    <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="header">
-        <div class="logo">Logo</div>
-        <div class="menu"></div>
-        <div class="status"></div>
+        <div class="logo"><img src="img/brain_plus.png" alt="" class="logo__img" /></div>
+        <div class="menu">Menu</div>
+        <div class="status">Status</div>
       </div>
       <div class="setup">
-        <div class="filelist"></div>
-        <div class="manage"></div>
+        <div class="setup__manage">
+          Zarządzanie sesją
+          <a class="setup__manage__iconlink" href=""
+            ><i class="fa fa-play" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="setup__filelist">Lista plików</div>
       </div>
       <div class="quiz">
-        <div class="content"></div>
-        <div class="control"></div>
+        <div class="quiz__content">Quizz - Obrazek</div>
+        <div class="quiz__control">
+          Quizz - Kontrola
+
+          <a class="quiz__control__iconlink" href=""
+            ><i class="fa fa-smile-o" aria-hidden="true" alt="TAK"></i
+          ></a>
+          <a class="quiz__control__iconlink" href=""
+            ><i class="fa fa-frown-o" aria-hidden="true" alt="NIE"></i
+          ></a>
+
+          <a class="quiz__control__iconlink" href=""
+            ><i class="fa fa-pause" aria-hidden="true"></i
+          ></a>
+          <a class="quiz__control__iconlink" href=""
+            ><i class="fa fa-stop" aria-hidden="true"></i
+          ></a>
+          <a class="quiz__control__iconlink" href=""
+            ><i class="fa fa-expand" aria-hidden="true"></i
+          ></a>
+          <a class="quiz__control__iconlink" href=""
+            ><i class="fa fa-compress" aria-hidden="true"></i
+          ></a>
+        </div>
       </div>
-      <div class="footer">(c)Aldur</div>
+      <div class="footer">Aldur (c)2020</div>
     </div>
   </body>
 </html>
