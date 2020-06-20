@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="pl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+    <title>Kolejność warstw - rok 2010</title>
+
+    <script type="text/javascript">
+      function ontop(id) {
+        document.getElementById("wr1").style.zIndex = 0;
+
+        document.getElementById("wr2").style.zIndex = 0;
+
+        document.getElementById("wr3").style.zIndex = 0;
+
+        document.getElementById(id).style.zIndex = 1;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div
+      id="wr1"
+      style="
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        background-color: yellow;
+        left: 100px;
+        top: 60px;
+        visibility: visible;
+      "
+    ></div>
+
+    <div
+      id="wr2"
+      style="
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        background-color: orange;
+        left: 70px;
+        top: 90px;
+        visibility: visible;
+      "
+    ></div>
+
+    <div
+      id="wr3"
+      style="
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        background-color: red;
+        left: 130px;
+        top: 120px;
+        visibility: visible;
+      "
+    ></div>
+
+    <div>
+      Wskazując pola wyboru, możesz decydować o kolejności:
+
+      <br />
+
+      <input type="radio" name="rd1" onclick="ontop('wr1');" />Pierwsza warstwa
+
+      <input type="radio" name="rd1" onclick="ontop('wr2');" />Druga warstwa
+
+      <input type="radio" name="rd1" onclick="ontop('wr3');" />Trzecia warstwa
+    </div>
+  </body>
+</html>

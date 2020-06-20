@@ -4,52 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aldur - Simple Image Test</title>
-    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="form-container">
+      <form class="form form--menu"></form>
+    </div>
     <div class="wrapper">
       <div class="header">
         <div class="logo"><img src="img/brain_plus.png" alt="" class="logo__img" /></div>
-        <div class="menu">Menu</div>
-        <div class="status">Status</div>
-      </div>
-      <div class="setup">
-        <div class="setup__manage">
-          Zarządzanie sesją
-          <a class="setup__manage__iconlink" href=""
-            ><i class="fa fa-play" aria-hidden="true"></i
-          ></a>
-        </div>
-        <div class="setup__filelist">Lista plików</div>
-      </div>
-      <div class="quiz">
-        <div class="quiz__content">Quizz - Obrazek</div>
-        <div class="quiz__control">
-          Quizz - Kontrola
-
-          <a class="quiz__control__iconlink" href=""
-            ><i class="fa fa-smile-o" aria-hidden="true" alt="TAK"></i
-          ></a>
-          <a class="quiz__control__iconlink" href=""
-            ><i class="fa fa-frown-o" aria-hidden="true" alt="NIE"></i
-          ></a>
-
-          <a class="quiz__control__iconlink" href=""
-            ><i class="fa fa-pause" aria-hidden="true"></i
-          ></a>
-          <a class="quiz__control__iconlink" href=""
-            ><i class="fa fa-stop" aria-hidden="true"></i
-          ></a>
-          <a class="quiz__control__iconlink" href=""
-            ><i class="fa fa-expand" aria-hidden="true"></i
-          ></a>
-          <a class="quiz__control__iconlink" href=""
-            ><i class="fa fa-compress" aria-hidden="true"></i
-          ></a>
+        <div id="status" class="status">Wybierz obrazki do quizu...</div>
+        <div class="menu">
+          <form id="runquiz--form" class="form form__menu">
+            <button id="runquiz--button" class="form__button">
+              Run Quiz
+            </button>
+          </form>
         </div>
       </div>
-      <div class="footer">Aldur (c)2020</div>
+      <div id="app">
+        <div id="setup" class="setup">
+          <div class="setup__filelist">
+            <div id="drop-area">
+              <form class="form form--createlist">
+                <div>
+                  Select images by dragging and dropping files onto this region or using the button
+                </div>
+                <input
+                  type="file"
+                  id="fileElem"
+                  multiple
+                  accept="image/*"
+                  onchange="handleFiles(this.files)"
+                />
+                <label class="button" for="fileElem">Select some files</label>
+              </form>
+              <div id="gallery"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="footer">Aldur (c)2020</div> -->
     </div>
+    <script src="js/main.js" defer></script>
+    <!-- <script src="js/dragdrop.js"></script> -->
   </body>
 </html>
