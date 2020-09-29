@@ -1,0 +1,42 @@
+-----------------------------------------------------
+BŁĘDY
+-----------------------------------------------------
++> po wyborze NIE nie zmniejsza od razu licznika tylko dopiero po przejściu do następnego obrazka
+> złe style dla obrazków
+> brak responsywności
+
+-----------------------------------------------------
+DO ZROBIENIA
+-----------------------------------------------------
+============= Must be >>>>>>>>>>>>>>>>>>>>
+> przypomnieć sobie strukturę projektu (co gdzie jest / jak działa)
+> rozrysować oczekiwane widoki dla wszystkich wariantów
+> skalowanie obrazka do obszaru (funkcja)
+> responsywność
+> mobile first, landscape/portrait
+> dostosować style do GRID i zdefiniować te style
+> podpisy, nagłówki, ikony, teksty
+> style
+> przetestować działanie z Internetu (serwer aldur)
+    > utworzyć subdomenę
+    > wgrać pliki (prod)
+    > przetestować
+
+============= Nice To Have >>>>>>>>>>>>>>>
+> odrzucanie z listy dodawanych plików nie będących grafikami
+> struktura zawartości strony (pod Google)
+> minimalizacja źródeł
+> autoskalowanie wielkości miniatur na liście (żeby się mieściła całość na portview - jeśli jest odpowiednio duży)
+> czy na pewno dobre założenia? np. koniec przy 2 obrazkach?
+> możliwość przekazania całego katalogu obrazków (co z podkatalogami?)
+> moduł do definiowania parametrów quizu
+> usuwanie wybranych obrazków ze zbioru (przed quizem)
+> możliwość zaznaczania obrazków na liście (przed quizem) i działań masowych (np. usuń z listy)
+
+-----------------------------------------------------
+POMYSŁY
+-----------------------------------------------------
+> wykorzystanie Webpack
+> podsumowanie quizu (może nawet zapis wyników do logów(?))
+> automat skalujący obrazki do mniejszych przed rozpoczęciem quizu dla urządzeń z mniejszą rozdzielczością (2-3 wielkości)
+

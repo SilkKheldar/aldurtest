@@ -18,7 +18,7 @@ const showStatus = () => {
 };
 
 const showItem = (itemNo) => {
-  //? może tutaj też pobierać rozmiary "okna" i odpowiednio ustawiać wymiary obrazka ???
+  //? może tutaj też pobierać rozmiary "okna" i odpowiednio ustawiać wymiary obrazka (poprzez style w %) ???
 
   // let item = document.createElement("img");
   // item.src = quizList[itemNo]["img"];
@@ -30,7 +30,12 @@ const showItem = (itemNo) => {
 
   document.getElementById(
     "quiz__content"
-  ).innerHTML = `<img class="quizImg" src="${quizList[itemNo]["img"]}" alt="">`;
+  ).innerHTML = `<img class="quizImg" src="${quizList[itemNo]["img"]}" alt="(${itemNo})">`;
+};
+
+const showItemB = (itemNo) => {
+  // wersja z automatycznym skalowaniem obrazka przez style background-image
+  document.getElementById("quiz__content").style.backgroundImage = quizList[itemNo]["img"];
 };
 
 const getNextQuestionPos = (lastPos, randNext = true) => {
@@ -71,7 +76,7 @@ const quizFinished = () => {
   //imageLeft = 0;
 
   //potem odśwież stronę
-  setTimeout("location.href='http://127.0.0.1:5500';", 10000);
+  setTimeout("location.href='http://127.0.0.1:5500';", 10000); //! link wstawiony na sztywno !!!
 };
 
 const answer = (correct = 0) => {
@@ -102,11 +107,11 @@ const answer = (correct = 0) => {
       //showOptions();
     }
   }
-  showStatus();
   if (correct == 1) {
     quizList[imageCurr]["done"] = true;
     imageLeft--;
   }
+  showStatus();
   imageCurr = getNextQuestionPos(imageCurr, randOrder);
   showItem(imageCurr);
   console.log("aktualna pozycja = ", imageCurr);
@@ -133,8 +138,8 @@ const startQuiz = (e) => {
   let quizDiv = document.createElement("div");
   quizDiv.id = "quiz";
   quizDiv.innerHTML = `<div id="quiz__content" class="quiz__content">
-    <h1 id='temp'>Przygotowanie quizu...</h1>
-  </div>
+      <h1 id='temp'>Przygotowanie quizu...</h1>
+    </div>
     <div id="quiz__control" class="quiz__control">
       <button id="live-button__yes" onclick="answer(1)" type="button" class="live-button">
         <span>GOOD</span>

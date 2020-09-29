@@ -1,7 +1,20 @@
 @import "dragdrop.scss";
-@import "live-button.scss";
-@import "flex.scss";
+// @import "live-button.scss";
+// @import "flex.scss";
 .quizImg {
-  height: 200px;
-  width: 200px;
+  // size: contain;
+  max-height: 40vh;
+  max-width: 60vw;
 }
+.logo__img {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+// .quiz__content {
+//   background-image: "";
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position-x: center;
+//   background-position-y: center;
+// }
