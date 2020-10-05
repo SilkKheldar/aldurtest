@@ -32,6 +32,9 @@ DO ZROBIENIA
 > moduł do definiowania parametrów quizu
 > usuwanie wybranych obrazków ze zbioru (przed quizem)
 > możliwość zaznaczania obrazków na liście (przed quizem) i działań masowych (np. usuń z listy)
+> ładne animacje klawiszy sterowania (good/bad, i inne)
+> ładne przejścia między obrazkami
+> grafika podsumowująca quiz (albo lista wejściowa z oznaczonymi na zielono dobrze za 1 razem, na żółto z numerkiem za którym razem, na czerwono te co źle)
 
 -----------------------------------------------------
 POMYSŁY

@@ -1,5 +1,5 @@
 @import "dragdrop.scss";
-// @import "live-button.scss";
+// @import "live__button.scss";
 // @import "flex.scss";
 .quizImg {
   // size: contain;
@@ -18,3 +18,43 @@
 //   background-position-x: center;
 //   background-position-y: center;
 // }
+
+// *********** GRID ***************
+.grid__container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  // dla landscape
+  grid-template-columns: 70vw, 30vw;
+  grid-template-rows: 20vh, 80vh;
+  // dla portrait
+  // grid-template-columns: 100%;
+  // grid-template-rows: 10vh, 60vh, 30vh;
+}
+.grid__header {
+  display: grid;
+  grid-template-columns: 1fr, auto, 1fr;
+}
+.grid__header__status {
+  align-self: start;
+  justify-self: left;
+}
+.grid__header__menu {
+  z-index: 2;
+}
+.grid__quiz__question {
+  //place-content: center;
+  place-items: center;
+  background-color: black;
+}
+.grid__quiz__navarea {
+  display: grid;
+  align-content: center;
+  vertical-align: middle;
+  z-index: 1;
+  // dla landscape (całego ekranu)
+  grid-auto-flow: row;
+  // dla portrait (całego ekranu)
+  grid-auto-flow: column;
+}
