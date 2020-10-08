@@ -11,12 +11,14 @@ DO ZROBIENIA
 ============= Must be >>>>>>>>>>>>>>>>>>>>
 > przypomnieć sobie strukturę projektu (co gdzie jest / jak działa)
 > rozrysować oczekiwane widoki dla wszystkich wariantów
-> skalowanie obrazka do obszaru (funkcja)
+> skalowanie obrazka do obszaru (funkcja) (jeśli nie wystarczy CSS)
 > responsywność
 > mobile first, landscape/portrait
 > dostosować style do GRID i zdefiniować te style
 > podpisy, nagłówki, ikony, teksty
 > style
+> sprawdzić czy zdarzenia JS są uruchamiane po ...loaded (patrz: film ze szkolenia)
+> jeśli trzeba to uwzględnić propagację zdarzeń przy skalowaniu obrazka (funkcja)
 > przetestować działanie z Internetu (serwer aldur)
     > utworzyć subdomenę
     > wgrać pliki (prod)
